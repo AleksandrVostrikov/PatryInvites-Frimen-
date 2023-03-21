@@ -1,0 +1,39 @@
+﻿@model GuestResponse
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>RsvpForm</title>
+    </head>
+    <body>
+        <form asp-action="RsvpForm" method="post">
+            <div>
+                <label asp-for="Name">Ваше имя</label>
+                <input asp-for="Name" />
+            </div>
+            <div>
+                <label asp-for="Email">Email</label>
+                <input asp-for="Email" />
+            </div>
+            <div>
+                <label asp-for="Phone">Телефон</label>
+                <input asp-for="Phone" />
+            </div>
+            <div>
+                <label asp-for="WillAttend">Приду?</label>
+                <select asp-for="WillAttend">
+                    <option value="">Выберете из списка</option>
+                    <option value="true">Да, конечно!</option>
+                    <option value="false">Нет, не смогу!</option>
+                </select>
+            </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </body>
+</html>
+
+

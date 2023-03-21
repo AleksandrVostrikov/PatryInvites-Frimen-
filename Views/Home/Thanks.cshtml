@@ -1,0 +1,27 @@
+﻿@model GuestResponse
+@{
+    Layout = null;
+}
+
+<!Doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Thanks</title>
+    </head>
+    <body>
+        <div>
+            <h1>Спасибо, @Model.Name!</h1>
+            @if (Model.WillAttend == true)
+            {
+                @:Это просто прекрасно, что Вы придете!
+            }
+            else
+            {
+                @:Печально слышать, что Вас не будет!
+            }
+        </div>
+        Нажмите <a asp-action="ListResponses">сюда</a>, чтобы увидеть список гостей.
+    </body>
+</html>
+
