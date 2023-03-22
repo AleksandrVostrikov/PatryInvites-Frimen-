@@ -8,31 +8,37 @@
     <head>
         <meta name="viewport" content="width=device-width" />
         <title>RsvpForm</title>
+        <link rel="stylesheet" href="~/css/styles.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     </head>
     <body>
-        <form asp-action="RsvpForm" method="post">
-            <div>
-                <label asp-for="Name">Ваше имя</label>
-                <input asp-for="Name" />
+    <div class="container d-flex justify-content-center">
+        <form asp-action="RsvpForm" method="post" class="m-2">
+            <h5 class="bg-primary text-white text-center p-2">Приглашение</h5>
+            <div asp-validation-summary="All"></div>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">Ваше имя</label>
+                <input asp-for="Name" class="form-control" required />
             </div>
-            <div>
-                <label asp-for="Email">Email</label>
-                <input asp-for="Email" />
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input asp-for="Email" class="form-control" required />
             </div>
-            <div>
-                <label asp-for="Phone">Телефон</label>
-                <input asp-for="Phone" />
+            <div class="mb-3">
+                <label asp-for="Phone" class="form-label">Телефон</label>
+                <input asp-for="Phone" class="form-control" required />
             </div>
-            <div>
-                <label asp-for="WillAttend">Приду?</label>
-                <select asp-for="WillAttend">
+            <div class="mb-3">
+                <label asp-for="WillAttend" class="form-label">Приду?</label>
+                <select asp-for="WillAttend" class="form-control" required>
                     <option value="">Выберете из списка</option>
                     <option value="true">Да, конечно!</option>
                     <option value="false">Нет, не смогу!</option>
                 </select>
             </div>
-            <button type="submit">Отправить</button>
+            <button class="btn btn-primary" type="submit">Отправить</button>
         </form>
+    </div>
     </body>
 </html>
 

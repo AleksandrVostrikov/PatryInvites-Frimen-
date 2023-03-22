@@ -7,13 +7,15 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <title>Party!</title>
     </head>
     <body>
         <div>
-            <div>
-                Мы собираемся на вечеринку. <br />
-                <a asp-action="RsvpForm">Принять приглашение</a>
+            <div class="text-center">
+                <h3>Мы собираемся на вечеринку.</h3> 
+                <h4>И Вы приглашены!</h4>
+                <a class="btn btn-primary" asp-action="RsvpForm">Принять приглашение</a>
             </div>
         </div>
     </body>
